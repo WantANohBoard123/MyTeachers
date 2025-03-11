@@ -1,0 +1,156 @@
+/* Import a clean, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+h2 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.container {
+    padding-top: 50px;
+}
+
+#polaroids {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.polaroid {
+    background: white;
+    padding: 10px;
+    width: 150px;
+    height: 230px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    transform: rotate(-5deg);
+    cursor: pointer;
+    display: inline-block;
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.polaroid img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.polaroid p {
+    color: black;
+}
+
+.teacher-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+/* Teacher Image - Left Side */
+.teacher-card img {
+    width: 230px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 45px;
+}
+
+/* Teacher Info - Right Side */
+.teacher-info {
+    flex: 1;
+}
+
+.teacher-info h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.teacher-info p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.teacher-info p strong {
+    color: #111;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.068); 
+    backdrop-filter: blur(3px); 
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 1rem;
+}
+
+.footer-container p {
+    margin: 0;
+    font-weight: 50px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+        #polaroids {
+        display: grid; /* Change to grid layout */
+        grid-template-columns: repeat(2, 1fr); /* Set to 2 columns */
+        gap: 15px; /* Adjust gap between polaroids */
+    }
+
+    .polaroid {
+        width: 100%; /* Make the polaroid take full width of its grid cell */
+        height: auto; /* Adjust height to maintain aspect ratio */
+    }
+    
+    .teacher-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .teacher-card img {
+        max-width: 200px;
+        height: auto;
+        margin: 0 0 15px 0;
+    }
+}
